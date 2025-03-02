@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backrooms Simulator</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="minimapa"></div>
+        <div id="hud">
+            <div id="position">Posición: <span id="coords">0, 0</span></div>
+        </div>
+    </div>
+    <div id="loading">CARGANDO...</div>
+    
+    <script src="mapa.js"></script>
+    <script src="texturas.js"></script>
+    <script src="raycaster.js"></script>
+    <script src="juego.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('loading').style.display = 'none';
+            iniciarJuego();
+        });
+    </script>
+</body>
+</html>
